@@ -40,11 +40,11 @@ The modelling approach focuses on descriptive and explanatory techniques to unco
 
 *	 **Temporal analysis of behavioural change**: to study how preferences evolve from the platform’s establishment period to their high-growth period, interactions were partitioned into temporal segments and the difference in preferences across these periods were analyzed 
 
-*	 **Individual rating prediction**: supervised learning techniques were trained to predict individual user ratings based on engineered behavioural and content features:
-  * *Linear Regression (Baseline)*: provides immediate interpretability through coefficients, allowing us to quantify exactly how much a feature impacts the final rating
-  * *Artificial Neural Network (Prediction)*: Multi-Layer Perceptron (MLP) using the Keras Sequential API with Dense layers and ReLU activation functions, utilized the Adam optimizer and Mean Squared Error loss
-  * *Decision Tree Regression*: used due to its ability to capture non-linear relationships and its interpretability
-  * *Random Forest Regressor*: employed as an ensemble extension of Decision Trees, aiming to reduce variance and improve generalization
+* **Individual rating prediction:** supervised learning techniques were trained to predict individual user ratings based on engineered behavioural and content features:
+   * *Linear Regression (Baseline)*: provides immediate interpretability through coefficients, allowing us to quantify exactly how much a feature impacts the final rating
+   * *Artificial Neural Network (Prediction)*: Multi-Layer Perceptron (MLP) using the Keras Sequential API with Dense Layers and ReLU activation functions, utilized the Adam optimizer and Mean Squared Error loss
+   * *Decision Tree Regression*: used due to its ability to capture non-linear relationships and for its interpretability
+   * *Random Forest Regressor*: employed as an ensemble extension of Decision Trees, aiming to reduce variance and improve generalization
 
   The models were trained using aggregated user-level and movie-level numerical features derived from the merged dataset.   Model hyperparameters such as tree depth, minimum number of samples per leaf, and number of estimators were selected to   balance model complexity and overfitting.
 
