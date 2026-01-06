@@ -148,8 +148,6 @@ The modelling approach focuses on descriptive and explanatory techniques to unco
 * **Rating prediction is largely driven by historical user and movie behavior:** A linear regression model achieved solid baseline performance (R² ≈ 0.36, RMSE ≈ 0.87), showing that past averages explain much of the signal. More flexible models provide small but consistent gains. In particular, the ANN achieved the best overall accuracy, capturing weak non-linear patterns and slightly improving R² and RMSE. As predictive precision is prioritized over interpretability, the ANN was selected as the final model.
 
 
-<img src="images/random_forest.png" alt="Random Forest" width="50%unit">
-
 
 
 ## 5. DISCUSSION AND CONCLUSIONS
