@@ -53,7 +53,7 @@ The modelling approach focuses on descriptive and explanatory techniques to unco
 
 
 ### 2.6 Environment and Reproducibility
-*	Language: Python 3.10
+*	Language: Python 3.12
 *	Libraries: pandas/numpy/sqlite3 (data handing & manipulation), scikit-learn (Clustering, Trees, Regression, Imputation), tensorflow/keras (ANN architecture), matplotlib/seaborn (visualization).
 *	Reproduction: Run pip install -r requirements.txt followed by the provided notebook.
 
