@@ -27,7 +27,7 @@ Rating values in the interaction data largely fall within the expected [1-5] ran
 Data cleaning was guided by the exploratory analysis to correct genuine data issues while preserving behavioral signals.
 Invalid rating values outside the [1-5] range were converted to missing values to prevent them from affecting aggregated features. A small number of duplicate movie IDs were also removed.
 
-Missing values were handled based on their underlying cause. In the interaction data, missing ratings were dropped as the absence of a rating meant the absence of an interaction.
+Missing values were handled based on their underlying cause. In the interaction data, missing ratings were dropped in order to be used for prediction and clustering models later on. 
 
 In the user_statistics and movie_statistics tables, some values are missing when only one rating is available; in these cases, the value was set to zero. Where aggregated statistics were missing or inconsistent, they were recomputed directly from the cleaned interaction data to ensure consistency across tables.
 Some missing values could not be resolved through recomputation. In particular, many movies lacked release year information. To avoid substantial data loss while enabling downstream modelling, a binary indicator was introduced and missing release years were set to the median year.
