@@ -145,23 +145,23 @@ The modelling approach focuses on descriptive and explanatory techniques to unco
 <img src="images/evolution_user_preference.png" alt="Evolution User Preference" width="50%unit">
 
 
-* **Predictive modelling results indicate that individual ratings are driven by strong linear trends, with additional but limited non-linear structure:** A linear regression baseline achieved solid performance (R² ≈ …, RMSE ≈ …) with normally distributed residuals, indicating limited systematic error. Feature analysis shows that historical user and movie average ratings dominate prediction, while metadata such as release year contributes minimally. More complex models, particularly random forests, achieved modest but consistent improvements in predictive accuracy by capturing non-linear preference patterns. Given that the objective of rating prediction prioritizes precision over interpretability, the random forest model was selected as the final predictive approach, as it offers the best accuracy despite reduced transparency.
+* **Rating prediction is largely driven by historical user and movie behavior:** A linear regression model achieved solid baseline performance (R² ≈ 0.36, RMSE ≈ 0.87), showing that past averages explain much of the signal. More flexible models provide small but consistent gains. In particular, the ANN achieved the best overall accuracy, capturing weak non-linear patterns and slightly improving R² and RMSE. As predictive precision is prioritized over interpretability, the ANN was selected as the final model.
 
 
 <img src="images/random_forest.png" alt="Random Forest" width="50%unit">
 
 
 
-### 4.2 Interpretation
-Overall, the analysis reveals a strong mismatch between how users behave and what the platform predominantly promotes. Viewer behaviour is highly heterogeneous, with clearly distinct audience segments that value different types of content, while content exposure remains largely uniform and driven by aggregate popularity. Over time, the system increasingly favours safe, mainstream titles, even though many user segments show stronger preferences for under-exposed and niche content. At the individual level, ratings are only partially predictable: while simple historical patterns explain much of the signal, non-linear models provide meaningful, though limited, accuracy gains. Taken together, these findings suggest that predictive precision is best achieved with flexible models such as random forests, while the greatest overall platform improvement lies in better aligning content exposure with audience segments and evolving preferences.
+## 5. DISCUSSION AND CONCLUSIONS
+
+The analysis reveals a clear mismatch between heterogeneous user preferences and largely uniform content exposure driven by aggregate popularity. Audience segmentation shows that distinct user groups value different types of content, while exposure patterns increasingly favor safe, mainstream titles, leading to systematic under-exposure of niche and high-quality content.
+
+At the individual level, ratings are only partially predictable. Linear models capture the dominant historical signal, while more flexible models such as ANNs provide modest but consistent improvements by modeling weak non-linear patterns. As predictive precision is prioritized over interpretability, the ANN was selected as the final model.
+
+Overall, the results suggest that the greatest opportunity for platform improvement lies in aligning content exposure with distinct audience segments and evolving user preferences. Segment-aware recommendation strategies can improve user satisfaction while supporting content diversity and long-tail discovery.
 
 
-
-
-
-
-## 5. CONCLUSIONS
-This project shows that understanding audience behaviour requires moving beyond individual rating prediction toward segmentation, interaction analysis, and temporal dynamics. Viewer behaviour is highly heterogeneous, while content exposure is largely driven by popularity, leading to systematic under-exposure of high-quality and niche content despite strong user preferences. At the individual level, ratings are only partially predictable: linear models capture the dominant signal, while more flexible models such as random forests achieve higher precision by modelling non-linear patterns, though substantial variability remains inherently user-specific. Overall, the results suggest that the greatest gains lie not in increasingly complex predictive models, but in better aligning content exposure with distinct audience segments and evolving preferences.
+## 6. FUTURE DIRECTIONS
 
 The current model relies heavily on aggregate statistics, which introduces a "cold start" problem for new users. Future work should focus on:
 * **Content-Based Filtering:** Incorporating Natural Language Processing (NLP) of movie descriptions and metadata to predict ratings for new content where historical data is sparse.
